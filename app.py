@@ -21,7 +21,6 @@ app = Flask(__name__)
 from flask_sqlalchemy import SQLAlchemy
 
 # SQLAlchemy Fix from https://help.heroku.com/ZKNTJQSK/why-is-sqlalchemy-1-4-x-not-connecting-to-heroku-postgres
-
 uri = os.getenv("DATABASE_URL")  # or other relevant config var
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
